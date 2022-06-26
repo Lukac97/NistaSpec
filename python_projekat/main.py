@@ -1,6 +1,9 @@
-import hash_module
+from python_projekat.database_model import Database
+from python_projekat.register_helper import fct_prompt_register
 
 
 if __name__ == "__main__":
-    hash = hash_module.hash_password("loptica")
-    print(hash_module.check_password(hash, "loptica"))
+    obj_db = Database()
+
+    while True:
+        fct_prompt_register(obj_db)
