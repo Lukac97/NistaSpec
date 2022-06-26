@@ -1,11 +1,16 @@
+import sys
+
 from python_projekat.register_helper import fct_prompt_register
+from python_projekat.login_helper import fct_prompt_login
 
 
 def fct_menu_options(obj_db, int_option):
     if int_option == 1:
         fct_prompt_register(obj_db)
     elif int_option == 2:
-        pass
+        fct_prompt_login(obj_db)
+    elif int_option == 3:
+        sys.exit()
 
 
 def fct_cl_menu(obj_db):
