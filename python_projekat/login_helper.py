@@ -20,8 +20,7 @@ def fct_prompt_login(obj_db):
     str_password = input("Please enter your password: ")
     str_location = input("Please enter password location: ")
 
-    if str_location in obj_user.dct_passwords and obj_db.mtd_check_pass_exist(
-            str_location, hash_module.hash_password(str_password)):
+    if obj_user[str_location] == hash_module.hash_password(str_password):
         str_hashed_password = hash_module.hash_password(str_password)
         check_real_password = hash_module.check_password(str_hashed_password,
                                                          str_password)
@@ -29,5 +28,3 @@ def fct_prompt_login(obj_db):
             print("Successful login")
         else:
             print("Unsuccessful login")
-    else:
-        print("Wrong password or password location entered")
