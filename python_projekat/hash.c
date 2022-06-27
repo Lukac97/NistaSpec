@@ -49,7 +49,7 @@ static PyObject* check_password(PyObject* self, PyObject* args)
     }
     else
     {
-        return Py_BuildValue("s#", new_hash_password, strlen(real_password));
+        return Py_BuildValue("i", FALSE);
     }
 
 
