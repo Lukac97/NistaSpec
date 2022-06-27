@@ -28,22 +28,16 @@ class Database:
             obj_data.dct_passwords= user["passwords"]
             self.lst_users.append(obj_data)
 
-
     def mtd_write_new_user_in_model(self):
-
-        dict_users = {}
-
-        dict_users["usernames_and_passwords"] = []
+        dict_users = {
+            "usernames_and_passwords": []
+        }
 
         for user in self.lst_users:
-            dict_user[] = user
+            dict_user = {
+                "username": user.str_username,
+                "passwords": user.dct_passwords
+            }
+
         with open("username_database.json", 'w') as f:
-
-
-
-
-
-
-
-
-
+            json.dump(dict_users, f)
