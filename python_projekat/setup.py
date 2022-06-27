@@ -16,7 +16,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
         author='group_1',
         license='MIT',
         package_dir={},
-        install_requires=['sys', 'time'],
+        install_requires=[],
         test_suite='tests',
         python_requires=">=3.6",
     )

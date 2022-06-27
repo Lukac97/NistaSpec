@@ -9,8 +9,7 @@ def fct_menu_options(obj_db, int_option):
         fct_prompt_register(obj_db)
     elif int_option == 2:
         fct_prompt_login(obj_db)
-    elif int_option == 3:
-        sys.exit()
+
 
 
 def fct_cl_menu(obj_db):

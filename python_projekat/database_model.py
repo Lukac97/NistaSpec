@@ -23,12 +23,12 @@ class Database:
 
         self.lst_users = []
 
-        for user in dict_users["username_and_passwords"]:
+        for user in dict_users["usernames_and_passwords"]:
             obj_data = User(user["username"])
             obj_data.dct_passwords= user["passwords"]
             self.lst_users.append(obj_data)
 
-    def mtd_write_new_user_in_model(self):
+    def mtd_save_model(self):
         dict_users = {
             "usernames_and_passwords": []
         }
@@ -38,6 +38,7 @@ class Database:
                 "username": user.str_username,
                 "passwords": user.dct_passwords
             }
+            dict_users["usernames_and_passwords"].append(dict_user)
 
         with open("username_database.json", 'w') as f:
             json.dump(dict_users, f)

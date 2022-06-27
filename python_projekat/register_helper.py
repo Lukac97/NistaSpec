@@ -23,6 +23,8 @@ def fct_prompt_register(obj_db):
     str_password = ""
     while str_password == "" or len(str_password) > 15:
         str_password = input("Please enter your password: ")
+        if len(str_password) > 15:
+            print("Password must be less then 15 characters.")
 
     str_location = input("Please enter registering location: ")
 
