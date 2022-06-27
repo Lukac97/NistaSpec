@@ -1,0 +1,29 @@
+{
+  "usernames_and_passwords": [
+  {
+    "username" : "Pera",
+    "passwords": {
+        "Facebook": "pt%3",
+        "Twitter": "mfdi2gk",
+        "Instagram" : "koifdji"
+                 }
+  },
+  {
+    "username" : "Jovan",
+    "passwords": {
+        "Facebook": "dgagsa",
+        "Twitter": "mmnr23a",
+        "Instagram" : "nfdgfgdfaz"
+                 }
+  },
+  {
+    "username" : "Nenad",
+    "passwords": {
+        "Facebook": "kolkpcmnsa",
+        "Twitter": "mkmi9psalkp",
+        "Instagram" : "zsamikmpoks"
+                 }
+  }
+
+  ]
+}

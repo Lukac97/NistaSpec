@@ -4,7 +4,7 @@ from python_projekat.user_model import User
 
 
 def fct_get_user_by_name(obj_db, str_username):
-    # TODO: implement logic for getting user object from db.
+
     return obj_db.mtd_get_user_by_name(str_username)
 
 
