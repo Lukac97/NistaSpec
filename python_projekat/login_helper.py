@@ -3,6 +3,18 @@ from python_projekat.user_model import User
 from python_projekat.register_helper import fct_get_user_by_name
 
 
+def fct_check_login(obj_user, str_location, str_password):
+    if obj_user[str_location] is not None:
+        check_real_password = hash_module.check_password(
+            obj_user[str_location], str_password)
+        if check_real_password:
+            print("Successful login")
+        else:
+            print("Unsuccessful login")
+    else:
+        print("Unsuccessful login")
+
+
 def fct_prompt_login(obj_db):
     obj_user = None
     while obj_user is None:
@@ -15,10 +27,4 @@ def fct_prompt_login(obj_db):
     str_password = input("Please enter your password: ")
     str_location = input("Please enter password location: ")
 
-    if obj_user[str_location] is not None:
-        check_real_password = hash_module.check_password\
-            (obj_user[str_location], str_password)
-        if check_real_password:
-            print("Successful login")
-        else:
-            print("Unsuccessful login")
+    fct_check_login(obj_user, str_location, str_password)

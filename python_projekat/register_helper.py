@@ -28,4 +28,7 @@ def fct_prompt_register(obj_db):
 
     str_location = input("Please enter registering location: ")
 
-    obj_user[str_location] = hash_module.hash_password(str_password)
+    if str_location in obj_user:
+        input("User is already registered on this location.")
+    else:
+        obj_user[str_location] = hash_module.hash_password(str_password)

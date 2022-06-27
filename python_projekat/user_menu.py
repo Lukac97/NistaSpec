@@ -11,7 +11,6 @@ def fct_menu_options(obj_db, int_option):
         fct_prompt_login(obj_db)
 
 
-
 def fct_cl_menu(obj_db):
     int_input = 0
     while int_input != 3:
